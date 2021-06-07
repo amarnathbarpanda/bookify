@@ -1,0 +1,40 @@
+.popular{
+    font-family: var(--ff-head);
+    text-align: center;
+    max-width: 136.6rem;
+    background: var(--clr-white);
+    padding: 3rem;
+    margin: 0 auto;
+}
+
+.popular__head{
+    color: var(--clr-primary-lt);
+    font-family: var(--ff-head);
+    font-size: 3rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+    margin-top: 5rem;
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+}
+
+
+.rec.rec-arrow {
+    font-size: 3rem;
+}
+
+/* .ehkxHv:hover:enabled{
+    color: black;
+} */
+/* .cGKbZh:hover:enabled:hover{
+    color: var(--clr-white);
+    background-color: var(--clr-primary-ltr);
+}
+.ejXxNI{
+
+    box-shadow: 0 0 1px 3px var(--clr-primary-ltr);
+}
+.ejXxNI:hover {
+    box-shadow: 0 0 1px 3px var(--clr-primary-ltr);
+    cursor: pointer;
+} */

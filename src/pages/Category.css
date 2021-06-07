@@ -1,0 +1,22 @@
+.category{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 3rem;
+    max-width: 136.6rem;
+    margin: 0 auto;
+}
+.category>h1{
+    font-size: 3rem;
+    font-family: var(--ff-head);
+    font-weight: 500;
+    color: var(--clr-primary-lt);
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+    margin-bottom: 2rem;
+}
+.category__tab{
+    width: 100%;
+    margin-bottom: 1rem;
+}

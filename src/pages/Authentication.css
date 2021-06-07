@@ -1,0 +1,117 @@
+.auth{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 3rem;
+    max-width: 136.6rem;
+    margin: 0 auto;
+}
+
+.auth__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.auth__left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    height: 55rem;
+}
+.auth__left img{
+    width: 80%;
+}
+
+.auth__right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex: 1;
+    height: 55rem;
+    width: 100%;
+}
+
+.auth__right h1{
+    font-size: 2.5rem;
+    color: var(--clr-primary-lt);
+    font-family: var(--ff-para);
+}
+
+.switch{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--clr-primary);
+    font-family: var(--ff-para);
+}
+
+.auth__right form{
+    font-family: var(--ff-para);
+    color: var(--clr-primary);
+    width: 60%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 1rem;
+    background: #ffffff;
+    box-shadow:  5px 5px 10px #bdbdbd,
+             -5px -5px 10px #ffffff;
+    margin: 1rem 0;
+    padding: 1.5rem 0;
+    gap: 1rem;
+}
+
+.auth__right form input{
+    font-family: var(--ff-para);
+    color: var(--clr-primary);
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    padding: 1rem 2rem;
+    width: 95%;
+    border: 0;
+    border-radius: 1rem;
+    background: #ffffff;
+    box-shadow: inset 8px 8px 16px #d9d9d9,
+                inset -8px -8px 16px #ffffff;
+    outline: none;
+}
+
+.auth__right form .span{
+    font-size: 1.5rem;
+    font-family: var(--ff-para);
+    color: var(--clr-primary);
+}
+.auth__right form span b{
+    font-size: 1.5rem;
+    font-family: var(--ff-para);
+}
+
+.auth__right form img{
+    width: 3rem;
+    object-fit: contain;
+}
+                                                            
+@media (max-width: 990px){
+    html{
+        font-size: 55%;
+    }
+}
+@media (max-width: 768px){
+    html{
+        font-size: 45%;
+    }
+    .auth__container{
+        flex-direction: column;
+    }
+    .auth__left{
+        display: none;
+    }
+    .auth__right{
+        width: 100%;
+        margin: 5rem;
+    }    
+    .auth__right form{
+        width: 100%;
+    }
+}

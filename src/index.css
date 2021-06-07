@@ -1,13 +1,22 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Reggae+One&display=swap');
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root{
+  --clr-primary: #302D4A;
+  --clr-primary-lt: #004BE7;
+  --clr-primary-ltr: #5A69E7;
+  --clr-accent: #FF2549;
+  --clr-grey: grey;
+  --clr-white: #fff;
+  --ff-logo: 'Reggae One', cursive;
+  --ff-head: 'Josefin Sans', sans-serif;
+  --ff-para: 'Poppins', sans-serif;
+  /* --fs-tera: 3.6rem;
+  --fs-giga:  */
 }

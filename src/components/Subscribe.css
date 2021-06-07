@@ -1,0 +1,101 @@
+.subscribe{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 8rem auto 0 auto;
+    max-width: 136.6rem;
+}
+
+.subs__title{
+    width: 60%;
+    font-size: 3rem;
+    font-family: var(--ff-head);
+    color: var(--clr-primary-lt);
+    text-align: center;
+}
+.subs__container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.subs__left {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+.subs__left img{
+    width: 60%;
+    object-fit: contain;
+}
+.subs__right{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+.subs__right>form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 60%;
+}
+
+.subs__right>form>input{
+    width: 100%;
+    font-size: 1.5rem;
+    font-family: var(--ff-para);
+    color: var(--clr-grey);
+    padding: 1.5rem 2rem;
+    border: 0;
+    outline: none;
+    /* border-bottom: 2px solid var(--clr-grey); */
+    background: #ffffff;
+    box-shadow: inset 7px 7px 13px #d9d9d9,
+            inset -7px -7px 13px #ffffff;
+}
+.subs__right>form>button{
+    width: 100%;
+    margin: .5rem;
+    padding: 1rem 2rem;
+    font-size: 2rem;
+    font-family: var(--ff-para);
+    color: var(--clr-white);
+    background: linear-gradient(to right, var(--clr-accent), var(--clr-primary-ltr));
+    border: 0;
+}
+
+@media(max-width:990px){
+    html{
+        font-size: 55%;
+    }
+}
+@media(max-width:768px){
+    html{
+        font-size: 45%;
+    }
+    .subs__container{
+        flex-direction: column;
+    }
+    .subs__left img{
+        width: 100%;
+        object-fit: contain;
+        margin-top: 5rem;
+    }
+    .subs__right{
+        margin-top: 5rem;
+    }
+    .subs__right>form{
+        width: 60%;
+        margin-bottom: 10rem;
+    }
+    .subs__right>form>button{
+        width: 100%;
+        text-align: center;
+    }
+}

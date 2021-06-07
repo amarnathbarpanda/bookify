@@ -1,0 +1,26 @@
+.facilities{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 136.6rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+}
+.facilities h1{
+    font-size: 3.4rem;
+    font-family: var(--ff-head);
+    color: var(--clr-primary-lt);
+    text-transform: uppercase;
+    letter-spacing: .8rem;
+    font-weight: 400;
+    margin-bottom: 15rem;
+    margin-top: 5rem;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
