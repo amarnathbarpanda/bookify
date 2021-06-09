@@ -1,7 +1,7 @@
 import React from "react";
 import Block from "./Block";
 import "./Facilities.css";
-import {Fdata} from "../Fdata";
+import {Fdata} from "../data/Fdata";
 
 function Facilities() {
   return (

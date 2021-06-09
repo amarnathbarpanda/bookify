@@ -2,7 +2,7 @@ import React from "react";
 import Carousel from "react-elastic-carousel";
 import Card from "../components/Card";
 import "./PopularBooks.css";
-import {Book} from '../Fdata';
+import {Book} from '../data/Fdata';
 
 const PopularBooks = () => {
   const breakPoints = [

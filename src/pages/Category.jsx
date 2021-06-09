@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import "./Category.css";
 import { Tabs, Tab, Paper } from "@material-ui/core";
-import ActionAdv from "../components/ActionAdv";
-import Fantasy from "../components/FantasyComp";
-import Self_HelpComp from "../components/Self_HelpComp";
+import Card from '../components/Card';
+import books from '../data/books';
 
 const Panel = (props) => {
   const { value, index, children } = props;
@@ -52,13 +51,43 @@ function Category() {
           </Tabs>
         </Paper>
         <Panel value={index} index={0}>
-          <ActionAdv/>
+        <div className="book__container">
+            {
+                books.filter((item)=>{
+                  return item.category === 'action and adventure'
+                }).map((item,index)=>{
+                    return(
+                        <Card key={index} img={item.img} title={item.title} author={item.author} price={item.price} rating={item.rating}/>
+                    )
+                })
+            }
+        </div>
         </Panel>
         <Panel value={index} index={1}>
-          <Fantasy/>
+        <div className="book__container">
+            {
+                books.filter((item)=>{
+                  return item.category === 'fantasy'
+                }).map((item,index)=>{
+                    return(
+                        <Card key={index} img={item.img} title={item.title} author={item.author} price={item.price} rating={item.rating}/>
+                    )
+                })
+            }
+        </div>
         </Panel>
         <Panel value={index} index={2}>
-          <Self_HelpComp/>
+        <div className="book__container">
+            {
+                books.filter((item)=>{
+                  return item.category === 'self_help'
+                }).map((item,index)=>{
+                    return(
+                        <Card key={index} img={item.img} title={item.title} author={item.author} price={item.price} rating={item.rating}/>
+                    )
+                })
+            }
+        </div>
         </Panel>
         <Panel value={index} index={3}>
           Third Item

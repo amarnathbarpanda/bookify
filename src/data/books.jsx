@@ -1,4 +1,4 @@
-const Action = [
+const books = [
     {
         id: 1,
         img: 'https://images-na.ssl-images-amazon.com/images/I/51wk0pzkD7L._SX322_BO1,204,203,200_.jpg',
@@ -6,7 +6,8 @@ const Action = [
         author: 'By R.L. Stevenson',
         price: 113,
         rating: 4,
-        altText: 'book_image'
+        altText: 'book_image',
+        category: 'action and adventure'
     },
     {
         id: 2,
@@ -15,7 +16,8 @@ const Action = [
         author: 'By William Goldman',
         price: 705,
         rating: 4,
-        altText: 'book_image'
+        altText: 'book_image',
+        category: 'action and adventure'
     },
     {
         id: 3,
@@ -24,7 +26,8 @@ const Action = [
         author: 'By Alexandre Dumas',
         price: 199,
         rating: 4,
-        altText: 'book_image'
+        altText: 'book_image',
+        category: 'action and adventure'
     },
     {
         id: 4,
@@ -33,7 +36,8 @@ const Action = [
         author: 'By Jules Verne',
         price: 1312,
         rating: 4,
-        altText: 'book_image'
+        altText: 'book_image',
+        category: 'action and adventure'
     },
     {
         id: 5,
@@ -42,7 +46,8 @@ const Action = [
         author: 'By Joseph Conrad',
         price: 99,
         rating: 4,
-        altText: 'book_image'
+        altText: 'book_image',
+        category: 'action and adventure'
     },
     {
         id: 6,
@@ -51,7 +56,8 @@ const Action = [
         author: 'By Gary Paulsen',
         price: 292,
         rating: 5,
-        altText: 'book_image'
+        altText: 'book_image',
+        category: 'action and adventure'
     },
     {
         id: 7,
@@ -60,7 +66,8 @@ const Action = [
         author: 'By Rudyard Kipling',
         price: 99,
         rating: 5,
-        altText: 'book_image'
+        altText: 'book_image',
+        category: 'action and adventure'
     },
     {
         id: 8,
@@ -69,7 +76,8 @@ const Action = [
         author: 'By Arthur C. Doyle',
         price: 128,
         rating: 5,
-        altText: 'book_image'
+        altText: 'book_image',
+        category: 'action and adventure'
     },
     {
         id: 9,
@@ -78,7 +86,8 @@ const Action = [
         author: 'By Jules Verne',
         price: 119,
         rating: 4,
-        altText: 'book_image'
+        altText: 'book_image',
+        category: 'action and adventure'
     },
     {
         id: 10,
@@ -87,193 +96,210 @@ const Action = [
         author: 'By Jules Verne',
         price: 299,
         rating: 5,
-        altText: 'book_image'
+        altText: 'book_image',
+        category: 'action and adventure'
     },
-];
-const Fantasy = [
     {
-        id: 1,
+        id: 11,
         img: 'https://m.media-amazon.com/images/I/51MDljSTrTL.jpg',
         title: 'Alice’s Adventures in Wonderland',
         author: 'By Lewis Carroll',
         price: 89,
         rating: 4,
-        altText: 'book_image'
+        altText: 'book_image',
+        category: 'fantasy'
     },
     {
-        id: 2,
+        id: 12,
         img: 'https://m.media-amazon.com/images/I/51YD0IGQTcL._AC_UY218_.jpg',
         title: 'The Hobbit',
         author: 'By J.R.R. Tolkien',
         price: 240,
         rating: 4,
-        altText: 'book_image'
+        altText: 'book_image',
+        category: 'fantasy'
     },
     {
-        id: 3,
+        id: 13,
         img: 'https://m.media-amazon.com/images/I/61Iy1lOvd1L._AC_UY218_.jpg',
         title:'The Sword in the Stone',
         author: 'By T.H. White',
         price: 350,
         rating: 4,
-        altText: 'book_image'
+        altText: 'book_image',
+        category: 'fantasy'
     },
     {
-        id: 4,
+        id: 14,
         img: 'https://m.media-amazon.com/images/I/51hQ4EstmyL.jpg',
         title: 'The Lion, the Witch, and the Wardrobe',
         author: 'By C.S. Lewis',
         price: 190,
         rating: 4,
-        altText: 'book_image'
+        altText: 'book_image',
+        category: 'fantasy'
     },
     {
-        id: 5,
+        id: 15,
         img: 'https://m.media-amazon.com/images/I/51lLMPTPDDL.jpg',
         title: 'The Master and Margarita',
         author: 'By Mikhail Bulgakov',
         price: 349,
         rating: 4,
-        altText: 'book_image'
+        altText: 'book_image',
+        category: 'fantasy'
     },
     {
-        id: 6,
+        id: 16,
         img: 'https://m.media-amazon.com/images/I/41OdHdVwcoL.jpg',
         title: 'The Last Unicorn',
         author: 'By Peter S. Beagle',
         price: 153,
         rating: 5,
-        altText: 'book_image'
+        altText: 'book_image',
+        category: 'fantasy'
     },
     {
-        id: 7,
+        id: 17,
         img: 'https://m.media-amazon.com/images/I/51yBOHJFBqL.jpg',
         title: 'A Wizard of Earthsea',
         author: 'By Ursula K. Le Guin',
         price: 308,
         rating: 5,
-        altText: 'book_image'
+        altText: 'book_image',
+        category: 'fantasy'
     },
     {
-        id: 8,
+        id: 18,
         img: 'https://m.media-amazon.com/images/I/51+cceyY8cL.jpg',
         title: 'The Dark is Rising',
         author: 'By Susan Cooper',
         price: 227,
         rating: 5,
-        altText: 'book_image'
+        altText: 'book_image',
+        category: 'fantasy'
     },
     {
-        id: 9,
+        id: 19,
         img: 'https://m.media-amazon.com/images/I/514koDXXAbL.jpg',
         title: 'The Forgotten Beasts of Eld',
         author: 'By P.A. McKillip',
         price: 480,
         rating: 4,
-        altText: 'book_image'
+        altText: 'book_image',
+        category: 'fantasy'
     },
     {
-        id: 10,
+        id: 20,
         img: 'https://m.media-amazon.com/images/I/514t7+BlU+L.jpg',
         title: ' The Famished Road',
         author: 'By Ben Okri',
         price: 454,
         rating: 5,
-        altText: 'book_image'
+        altText: 'book_image',
+        category: 'fantasy'
     },
-];
-const self_help = [
     {
-        id: 1,
+        id: 21,
         img: 'https://prodimage.images-bn.com/pimages/9781400201655_p0_v8_s600x595.jpg',
         title: 'Girl Wash Your Face',
         author: 'By Rachel Hollis',
         price: 299,
         rating: 4,
-        altText: 'book_image'
+        altText: 'book_image',
+        category: 'self_help'
     },
     {
-        id: 2,
+        id: 22,
         img: 'https://prodimage.images-bn.com/pimages/9781594634727_p0_v5_s600x595.jpg',
         title: 'Big Magic',
         author: 'By Elizabeth Gilbert',
         price: 384,
         rating: 4,
-        altText: 'book_image'
+        altText: 'book_image',
+        category: 'self_help'
     },
     {
-        id: 3,
+        id: 23,
         img: 'https://images-na.ssl-images-amazon.com/images/I/51fESaIGgVL._SX323_BO1,204,203,200_.jpg',
         title:'The Intelligent Investor Revised Edition',
         author: 'By Benjamin Graham',
         price: 1608,
         rating: 4,
-        altText: 'book_image'
+        altText: 'book_image',
+        category: 'self_help'
     },
     {
-        id: 4,
+        id: 24,
         img: 'https://images-na.ssl-images-amazon.com/images/I/61mEFHtyGVL._SX394_BO1,204,203,200_.jpg',
         title: 'The Secret',
         author: 'By Rhonda Byrne',
         price: 379,
         rating: 5,
-        altText: 'book_image'
+        altText: 'book_image',
+        category: 'self_help'
     },
     {
-        id: 5,
+        id: 25,
         img: 'https://images-na.ssl-images-amazon.com/images/I/51wOOMQ+F3L._SX312_BO1,204,203,200_.jpg',
         title: 'Rich Dad Poor Dad',
         author: 'By Robert T. Kiyosaki',
         price: 302,
         rating: 4,
-        altText: 'book_image'
+        altText: 'book_image',
+        category: 'self_help'
     },
     {
-        id: 6,
+        id: 26,
         img: 'https://images-na.ssl-images-amazon.com/images/I/41S8TQ9aNoL._SX323_BO1,204,203,200_.jpg',
         title: 'Life\'s Amazing Secrets',
         author: 'By Gaur Gopal Das',
         price: 183,
         rating: 5,
-        altText: 'book_image'
+        altText: 'book_image',
+        category: 'self_help'
     },
     {
-        id: 7,
+        id: 27,
         img: 'https://m.media-amazon.com/images/I/61McMhLCIuL._AC_UY218_.jpg',
         title: 'The Power of Your Subconscious Mind',
         author: 'By Joseph Murphy',
         price: 175,
         rating: 5,
-        altText: 'book_image'
+        altText: 'book_image',
+        category: 'self_help'
     },
     {
-        id: 8,
+        id: 28,
         img: 'https://m.media-amazon.com/images/I/81vvgZqCskL._AC_UY218_.jpg',
         title: 'The Lean Startup',
         author: 'By Eric Ries',
         price: 521,
         rating: 5,
-        altText: 'book_image'
+        altText: 'book_image',
+        category: 'self_help'
     },
     {
-        id: 9,
+        id: 29,
         img: 'https://m.media-amazon.com/images/I/71iEVsSP1GL._AC_UY218_.jpg',
         title: 'The Power of Habit',
         author: 'By Charles Duhigg',
         price: 359,
         rating: 4,
-        altText: 'book_image'
+        altText: 'book_image',
+        category: 'self_help'
     },
     {
-        id: 10,
+        id: 30,
         img: 'https://m.media-amazon.com/images/I/81ND4ZcIsxL._AC_UY218_.jpg',
         title: 'The Power of Positive Thinking',
         author: 'By  N.V.Peale',
         price: 140,
         rating: 5,
-        altText: 'book_image'
+        altText: 'book_image',
+        category: 'self_help'
     },
 ];
 
 
-export {Action, Fantasy, self_help};
+export default books;

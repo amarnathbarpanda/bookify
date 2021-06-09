@@ -34,9 +34,7 @@ const App = () => {
             <Footer/>
           </Route>
           <Route path="/cart">
-            
-            <div style={{width: '100%',textAlign: 'center',display:'flex',
-            alignItems:'center', justifyContent: 'center',flexDirection: 'column'}}><h1 style={{fontSize: '5rem',margin: '2rem',fontFamily: 'var(--ff-head)'}}>Shopping Cart is Empty</h1><img style={{width:'30%'}} src="img/shopping-cart.png" alt="" srcset="" /></div>
+            {/* <Cart/> */}
           </Route>
           <Route path="/">
             <Home />
