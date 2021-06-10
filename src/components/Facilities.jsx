@@ -1,14 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import Block from "./Block";
 import "./Facilities.css";
-import {Fdata} from "../data/Fdata";
+// import {Fdata} from "../data/Fdata";
+import {GlobalContext} from '../GlobalContext/StateProvider';
 
 function Facilities() {
+  const {facility} = useContext(GlobalContext);
   return (
     <div className="facilities">
       <h1>Our Facilities</h1>
       <div className="container">
-        {Fdata.map((item, index) => {
+        {facility.map((item) => {
           return (
             <Block
               imgSrc={item.icon}

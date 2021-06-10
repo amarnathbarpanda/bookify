@@ -10,6 +10,7 @@ import Home from "./pages/Home";
 import PopularBooks from "./components/PopularBooks";
 import Subscribe from "./components/Subscribe";
 import Category from "./pages/Category";
+import Cart from "./pages/Cart";
 
 const App = () => {
   return (
@@ -34,7 +35,7 @@ const App = () => {
             <Footer/>
           </Route>
           <Route path="/cart">
-            {/* <Cart/> */}
+            <Cart/>
           </Route>
           <Route path="/">
             <Home />

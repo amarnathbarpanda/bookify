@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+import React, { useState,useContext } from "react";
 import "./Category.css";
 import { Tabs, Tab, Paper } from "@material-ui/core";
 import Card from '../components/Card';
-import books from '../data/books';
+// import books from '../data/books';
+import {GlobalContext} from '../GlobalContext/StateProvider';
+
 
 const Panel = (props) => {
   const { value, index, children } = props;
-
+  
   return (
     <div hidden={value !== index}>
       <h1>{children}</h1>
@@ -15,17 +17,20 @@ const Panel = (props) => {
 };
 
 function Category() {
+
+  const {item} = useContext(GlobalContext);
+
   const catStyle = {
     fontSize: 20,
     color: "var(--clr-primary)",
     fontWeight: "600",
   };
-
+  
   const [index, setIndex] = useState(0);
   const onTabClick = (event, index) => {
     setIndex(index);
   };
-
+  
   return (
     <div className="category">
       <h1>Categories</h1>
@@ -53,7 +58,7 @@ function Category() {
         <Panel value={index} index={0}>
         <div className="book__container">
             {
-                books.filter((item)=>{
+                item.filter((item)=>{
                   return item.category === 'action and adventure'
                 }).map((item,index)=>{
                     return(
@@ -66,7 +71,7 @@ function Category() {
         <Panel value={index} index={1}>
         <div className="book__container">
             {
-                books.filter((item)=>{
+                item.filter((item)=>{
                   return item.category === 'fantasy'
                 }).map((item,index)=>{
                     return(
@@ -79,7 +84,7 @@ function Category() {
         <Panel value={index} index={2}>
         <div className="book__container">
             {
-                books.filter((item)=>{
+                item.filter((item)=>{
                   return item.category === 'self_help'
                 }).map((item,index)=>{
                     return(

@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import Carousel from "react-elastic-carousel";
 import Card from "../components/Card";
 import "./PopularBooks.css";
-import {Book} from '../data/Fdata';
+import {GlobalContext} from '../GlobalContext/StateProvider';
 
 const PopularBooks = () => {
+
+  const {popularBooks} = useContext(GlobalContext);
+
   const breakPoints = [
     { width: 1, itemsToShow: 1 },
     { width: 500, itemsToShow: 2 },
@@ -17,7 +20,7 @@ const PopularBooks = () => {
       <div className="popular__container">
         <Carousel breakPoints={breakPoints}>
         {
-          Book.map((items,index)=>{
+          popularBooks.map((items,index)=>{
             return(
             <Card key={index} img={items.img} title={items.title} author={items.author} price={items.price} rating={items.rating} altText={items.altText}/>
             )})

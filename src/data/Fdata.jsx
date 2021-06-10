@@ -26,7 +26,7 @@ const Fdata = [
     }
 ];
 
-const Book=[
+const pBook=[
     {
         id: 1,
         img: 'https://images-na.ssl-images-amazon.com/images/I/51T-sMqSMiL._SX329_BO1,204,203,200_.jpg',
@@ -76,4 +76,4 @@ const Book=[
 
 
 
-export {Fdata,Book};
+export {Fdata,pBook};

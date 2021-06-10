@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "./Header.css";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 import ShoppingCartRoundedIcon from "@material-ui/icons/ShoppingCartRounded";
@@ -6,6 +6,7 @@ import {Badge,makeStyles} from "@material-ui/core";
 import Toggle from "./Toggle";
 import CloseRoundedIcon from "@material-ui/icons/CloseRounded";
 import { Link, NavLink } from "react-router-dom";
+import { GlobalContext } from "../GlobalContext/StateProvider";
 
 const useStyles = makeStyles((theme) => ({
   badge: {
@@ -15,12 +16,15 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 const Header = () => {
+  
+  const {cart} = useContext(GlobalContext);
+  
   const user = {
     fontSize: "3rem",
     color: "var(--clr-primary)",
     margin: "0 1rem",
   };
-  const cart = {
+  const cartIcon = {
     fontSize: "3rem",
     color: "var(--clr-primary)",
   };
@@ -133,8 +137,8 @@ const Header = () => {
       <div className="other_options">
         <AccountCircleIcon style={user} />
         <Link style={{ textDecoration: "none" }} to="/cart">
-          <Badge classes={{ badge: classes.badge }} badgeContent={5} color="secondary">
-            <ShoppingCartRoundedIcon style={cart} />
+          <Badge classes={{ badge: classes.badge }} badgeContent={cart.length} color="secondary">
+            <ShoppingCartRoundedIcon style={cartIcon} />
           </Badge>
         </Link>
       </div>
