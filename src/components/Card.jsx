@@ -49,7 +49,7 @@ const Card = ({ id,img, title, author, price, rating }) => {
 
         <div className="price__rating">
           <span>Price:</span>
-          <span>Rs. {price}/-</span>
+          <span>₹ {price}/-</span>
         </div>
         <div className="price__rating">
           <span>Rating:</span>

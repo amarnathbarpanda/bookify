@@ -68,7 +68,7 @@ a{
   font-size: 1.8rem;
   text-transform: capitalize;
   color: var(--clr-primary);
-  font-family: var(--ff-head);
+  font-family: var(--ff-para);
   margin-bottom: 5rem;
 }
 
@@ -113,6 +113,7 @@ a{
   margin: auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  font-family: var(--ff-para);
 }
 
 .items-info .product-img img {
@@ -217,6 +218,7 @@ a{
   margin-top: 4rem;
   margin-bottom: 4rem;
   text-align: right;
+  font-family: var(--ff-para);
 }
 
 .card-total h3 {

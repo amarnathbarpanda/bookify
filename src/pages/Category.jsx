@@ -60,9 +60,9 @@ function Category() {
             {
                 item.filter((item)=>{
                   return item.category === 'action and adventure'
-                }).map((item,index)=>{
+                }).map((item)=>{
                     return(
-                        <Card key={index} img={item.img} title={item.title} author={item.author} price={item.price} rating={item.rating}/>
+                        <Card key={item.id} {...item}/>
                     )
                 })
             }
@@ -73,9 +73,9 @@ function Category() {
             {
                 item.filter((item)=>{
                   return item.category === 'fantasy'
-                }).map((item,index)=>{
+                }).map((item)=>{
                     return(
-                        <Card key={index} img={item.img} title={item.title} author={item.author} price={item.price} rating={item.rating}/>
+                        <Card key={item.id} {...item}/>
                     )
                 })
             }
@@ -86,34 +86,104 @@ function Category() {
             {
                 item.filter((item)=>{
                   return item.category === 'self_help'
-                }).map((item,index)=>{
+                }).map((item)=>{
                     return(
-                        <Card key={index} img={item.img} title={item.title} author={item.author} price={item.price} rating={item.rating}/>
+                        <Card key={item.id} {...item}/>
                     )
                 })
             }
         </div>
         </Panel>
         <Panel value={index} index={3}>
-          Third Item
+        <div className="book__container">
+            {
+                item.filter((item)=>{
+                  return item.category === 'classic'
+                }).map((item)=>{
+                    return(
+                        <Card key={item.id} {...item}/>
+                    )
+                })
+            }
+        </div>
         </Panel>
         <Panel value={index} index={4}>
-          Third Item
+        <div className="book__container">
+            {
+                item.filter((item)=>{
+                  return item.category === 'detective and mystery'
+                }).map((item)=>{
+                    return(
+                        <Card key={item.id} {...item}/>
+                    )
+                })
+            }
+        </div>
         </Panel>
         <Panel value={index} index={5}>
-          Third Item
+        <div className="book__container">
+            {
+                item.filter((item)=>{
+                  return item.category === 'horror'
+                }).map((item)=>{
+                    return(
+                        <Card key={item.id} {...item}/>
+                    )
+                })
+            }
+        </div>
         </Panel>
         <Panel value={index} index={6}>
-          Third Item
+        <div className="book__container">
+            {
+                item.filter((item)=>{
+                  return item.category === 'sci_fi'
+                }).map((item)=>{
+                    return(
+                        <Card key={item.id} {...item}/>
+                    )
+                })
+            }
+        </div>
         </Panel>
         <Panel value={index} index={7}>
-          Third Item
+        <div className="book__container">
+            {
+                item.filter((item)=>{
+                  return item.category === 'eductional'
+                }).map((item)=>{
+                    return(
+                        <Card key={item.id} {...item}/>
+                    )
+                })
+            }
+        </div>
         </Panel>
         <Panel value={index} index={8}>
-          Third Item
+        <div className="book__container">
+            {
+                item.filter((item)=>{
+                  return item.category === 'short_stories'
+                }).map((item)=>{
+                    return(
+                        <Card key={item.id} {...item}/>
+                    )
+                })
+            }
+        </div>
         </Panel>
         <Panel value={index} index={9}>
-          Third Item
+          T<div className="book__container">
+            {
+                item.filter((item)=>{
+                  return item.category === 'suspense and thrillers'
+                }).map((item)=>{
+                    return(
+                        <Card key={item.id} {...item}/>
+                    )
+                })
+            }
+        </div>
         </Panel>
       </div>
     </div>
