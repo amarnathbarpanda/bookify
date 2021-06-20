@@ -10,9 +10,9 @@ function Facilities() {
     <div className="facilities">
       <h1>Our Facilities</h1>
       <div className="container">
-        {facility.map((item) => {
+        {facility.map((item,index) => {
           return (
-            <Block
+            <Block key={index}
               imgSrc={item.icon}
               altImg={item.alt_txt}
               heading={item.title}

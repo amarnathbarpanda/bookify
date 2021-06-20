@@ -30,7 +30,7 @@ const App = () => {
             <Contact/>
             <Footer/>
           </Route>
-          <Route path="/signin">
+          <Route path="/auth">
             <Authentication/>
             <Footer/>
           </Route>

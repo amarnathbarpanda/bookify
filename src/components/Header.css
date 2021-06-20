@@ -137,7 +137,7 @@ a{
     .other_options{
         /* margin-right: 4rem; */
         position: absolute;
-        top: 1rem;
+        top: 0.3rem;
         right: 6rem;
     }
     .header__nav.active{

@@ -1,11 +1,13 @@
 export const reducer = (state, action) => {
   // console.log(action);
   switch (action.type) {
-    case "ADD_TO_CART":
+    case "ADD_TO_CART": {
+      
       return {
         ...state,
         cart: [...state.cart, action.cartItem],
       };
+    }
     case "REMOVE_ITEM":
       return {
         ...state,
@@ -23,32 +25,41 @@ export const reducer = (state, action) => {
       return { ...state, cart: updatedCart };
     }
     case "DECREASE_QUANTITY": {
-      let updatedCart = state.cart.map((curElem) => {
-        if (curElem.id === action.payload) {
-          return { ...curElem, quantity: curElem.quantity - 1 };
-        }
-        return curElem;
-      }).filter((curElem)=>{
-          return curElem.quantity !== 0
-      });
+      let updatedCart = state.cart
+        .map((curElem) => {
+          if (curElem.id === action.payload) {
+            return { ...curElem, quantity: curElem.quantity - 1 };
+          }
+          return curElem;
+        })
+        .filter((curElem) => {
+          return curElem.quantity !== 0;
+        });
       return { ...state, cart: updatedCart };
     }
     case "CLEAR_CART":
-        return {...state, cart:[]}
-    case "GET_TOTAL":
+      return { ...state, cart: [] };
+    case "GET_TOTAL": {
+      let { totalCartItems, totalPrice } = state.cart.reduce(
+        (accum, curVal) => {
+          let { quantity, price } = curVal;
+          accum.totalCartItems += quantity;
+          let updatedTotalPrice = price * quantity;
+          accum.totalPrice += updatedTotalPrice;
+          return accum;
+        },
         {
-            let {totalCartItems, totalPrice} = state.cart.reduce((accum, curVal)=>{
-                let {quantity, price} = curVal;
-                accum.totalCartItems += quantity;
-                let updatedTotalPrice = price * quantity;
-                accum.totalPrice += updatedTotalPrice;
-                return accum;
-            },{
-                totalCartItems: 0,
-                totalPrice: 0,
-            });
-            return {...state,totalCartItems, totalPrice}
+          totalCartItems: 0,
+          totalPrice: 0,
         }
+      );
+      return { ...state, totalCartItems, totalPrice };
+    }
+    case "SET_USER":
+      return { ...state, currentUser: action.user };
+
+    case 'GET_BOOKS':
+      return {...state,  item: action.payload};
 
     default:
       return state;

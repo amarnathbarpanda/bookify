@@ -20,9 +20,10 @@ const PopularBooks = () => {
       <div className="popular__container">
         <Carousel breakPoints={breakPoints}>
         {
-          popularBooks.map((items,index)=>{
+          popularBooks.map((items)=>{
+            {/* console.log(items.id); */}
             return(
-            <Card key={index} img={items.img} title={items.title} author={items.author} price={items.price} rating={items.rating} altText={items.altText}/>
+            <Card key={items.id} id={items.id} img={items.img} title={items.title} author={items.author} price={items.price} rating={items.rating} altText={items.altText}/>
             )})
         }
           

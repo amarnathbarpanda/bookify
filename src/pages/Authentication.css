@@ -45,7 +45,12 @@
     color: var(--clr-primary);
     font-family: var(--ff-para);
 }
-
+.auth div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .auth__right form{
     font-family: var(--ff-para);
     color: var(--clr-primary);
@@ -91,7 +96,13 @@
     width: 3rem;
     object-fit: contain;
 }
-                                                            
+.auth__right .link:hover{
+    color: var(--clr-primary-ltr);
+    cursor: pointer;
+}
+
+    
+                                                    
 @media (max-width: 990px){
     html{
         font-size: 55%;
@@ -104,7 +115,7 @@
     .auth__container{
         flex-direction: column;
     }
-    .auth__left{
+    .auth__left img{
         display: none;
     }
     .auth__right{
@@ -112,6 +123,6 @@
         margin: 5rem;
     }    
     .auth__right form{
-        width: 100%;
+        width: 70%;
     }
 }

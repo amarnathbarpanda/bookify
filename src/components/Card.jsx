@@ -58,7 +58,9 @@ const Card = ({ id,img, title, author, price, rating }) => {
         <div className="card__buttons">
           <TextOnlyTooltip title="Add to Cart" placement="bottom" arrow>
             <Button style={buyBtn}>
-              <AddShoppingCartRoundedIcon style={btnIcon} onClick={()=>addToCart(id,img, title, author, price, rating)}/>
+              <AddShoppingCartRoundedIcon style={btnIcon} onClick={()=>{
+                console.log(id);
+                addToCart(id,img, title, author, price, rating)}}/>
             </Button>
           </TextOnlyTooltip>
 

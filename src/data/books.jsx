@@ -39,6 +39,8 @@ const books = [
         altText: 'book_image',
         category: 'action and adventure'
     },
+
+
     {
         id: 5,
         img: 'https://m.media-amazon.com/images/I/51MV5rjhvUL.jpg',
@@ -475,7 +477,7 @@ const books = [
         title: 'The Eight',
         author: 'By Katherine Neville',
         price: 375,
-        rating: 4,
+        rating : 4,
         altText: 'book_The Eight',
         category: 'detective and mystery'
     },
@@ -652,7 +654,7 @@ const books = [
     {
         id: 66,
         img: 'https://m.media-amazon.com/images/I/81iM8KeK1bL._AC_UY218_.jpg',
-        title: 'The Children of Men',
+        title : 'The Children of Men',
         author: 'By P.D. James',
         price: 405,
         rating: 5,
@@ -673,8 +675,8 @@ const books = [
         id: 68,
         img: 'https://m.media-amazon.com/images/I/71O+fKB-jlL._AC_UL320_.jpg',
         title: 'Downbelow Station',
-        author: '',
-        price: 1152,
+        author:"By C. J. Cherryh",
+        price : 1152,
         rating: 5,
         altText: 'book_Downbelow Station',
         category: 'sci_fi'
@@ -723,7 +725,7 @@ const books = [
         id: 73,
         img: 'https://m.media-amazon.com/images/I/41+ThRMjtKL.jpg',
         title: 'The Privileged Poor',
-        author: '699',
+        author: 'By Anthony Abraham Jack',
         price: 255,
         rating: 5,
         altText: 'book_The Privileged Poor',
@@ -830,7 +832,7 @@ const books = [
         category: 'short_stories'
     },
     {
-        id: 83,
+        id: 84,
         img: 'https://m.media-amazon.com/images/I/818uz9QQ6lL._AC_UL320_.jpg',
         title: 'Awayland',
         author: 'By Ramona Ausubel',
@@ -840,7 +842,7 @@ const books = [
         category: 'short_stories'
     },
     {
-        id: 84,
+        id: 85,
         img: 'https://m.media-amazon.com/images/I/41FiPYO09bL._AC_UL320_.jpg',
         title: 'Sour Heart',
         author: 'By Jenny Zhang',
@@ -850,7 +852,7 @@ const books = [
         category: 'short_stories'
     },
     {
-        id: 85,
+        id: 86,
         img: 'https://m.media-amazon.com/images/I/41cRrOP6BwL._AC_UY218_.jpg',
         title: 'The King Is Always Above the People',
         author: 'By Jenny Zhang',
@@ -860,7 +862,7 @@ const books = [
         category: 'short_stories'
     },
     {
-        id: 86,
+        id: 87,
         img: 'https://m.media-amazon.com/images/I/41hTYlPepOL._AC_UY218_.jpg',
         title: 'After the Quake',
         author: 'By Haruki Murakami',
@@ -870,7 +872,7 @@ const books = [
         category: 'short_stories'
     },
     {
-        id: 87,
+        id: 88,
         img: 'https://m.media-amazon.com/images/I/91382RVTr3L._AC_UY218_.jpg',
         title: 'Arrival (Stories of Your Life MTI)',
         author: 'By Ted Chiang',
@@ -880,7 +882,7 @@ const books = [
         category: 'short_stories'
     },
     {
-        id: 88,
+        id: 89,
         img: 'https://m.media-amazon.com/images/I/81k+O7UDOML._AC_UY218_.jpg',
         title: 'The Boat',
         author: 'By Nam Le',
@@ -890,23 +892,13 @@ const books = [
         category: 'short_stories'
     },
     {
-        id: 89,
+        id: 90,
         img: 'https://m.media-amazon.com/images/I/71M0b7isP-L._AC_UY218_.jpg',
         title: 'Tenth of December',
         author: 'By George Saunders',
         price: 355,
         rating: 4,
         altText: 'book_Tenth of December',
-        category: 'short_stories'
-    },
-    {
-        id: 90,
-        img: 'https://m.media-amazon.com/images/I/91Z4p92lI8L._AC_UY218_.jpg',
-        title: 'Dear Life',
-        author: 'By Alice Munro',
-        price: 500,
-        rating: 4,
-        altText: 'book_Dear Life',
         category: 'short_stories'
     },
     {
@@ -923,7 +915,7 @@ const books = [
         id: 92,
         img: 'https://m.media-amazon.com/images/I/61vrAu3FrIL._AC_UY218_.jpg',
         title: 'The Shining',
-        author: 'By Ian McEwan',
+        author: 'By Stephen King',
         price: 391,
         rating: 4,
         altText: 'book_The Shining',
@@ -979,6 +971,7 @@ const books = [
         altText: 'book_Dead Letters',
         category: 'suspense and thrillers'
     },
+    // ! done 
     {
         id: 98,
         img: 'https://m.media-amazon.com/images/I/71pkPxJbR+L._AC_UY218_.jpg',
