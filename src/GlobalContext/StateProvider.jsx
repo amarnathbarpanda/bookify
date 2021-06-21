@@ -1,15 +1,15 @@
 import React, { createContext, useEffect, useReducer, useState } from "react";
 import { reducer } from "./reducer";
-import books from "../data/books";
+// import books from "../data/books";
 import { Fdata, pBook } from "../data/Fdata";
-import { auth } from "../firebase";
+import { auth, db, provider } from "../firebase";
 import { toast } from "react-toastify";
 
 const localCart = JSON.parse(localStorage.getItem("cart") || "[]");
 export const GlobalContext = createContext();
 
 const initialState = {
-  item: books,
+  item: [],
   facility: Fdata,
   popularBooks: pBook,
   cart: localCart,
@@ -22,12 +22,29 @@ const StateProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
   // console.log(state.item);
   // console.log(state.cart);
-  // let localCart = localStorage.getItem(state.cart);
   const [loading, setLoading] = useState(true);
+  const ref = db.collection('books').orderBy('id','asc');
 
+  const getBooks = () => {
+    setLoading(true);
+    ref.onSnapshot((querySnapshot)=>{
+      const items = [];
+      querySnapshot.forEach((doc) =>{
+        let p = doc.data();
+        items.push(p);
+      });
+      console.log(items);
+      dispatch({
+        type: 'GET_BOOKS',
+        payload: items
+      })
+      // setBooks(items);
+      setLoading(false);
+    });
+}
   const addToCart = (id, img, title, author, price, rating) => {
     if (state.currentUser !== null) {
-      return dispatch({
+      return (dispatch({
         type: "ADD_TO_CART",
         cartItem: {
           id: id,
@@ -38,7 +55,8 @@ const StateProvider = ({ children }) => {
           rating: rating,
           quantity: 1,
         },
-      });
+      }),
+      dispatch({ type: "GET_TOTAL" }));
     } else {
       return toast.error("You must be logged in before adding items to cart!");
     }
@@ -85,12 +103,17 @@ const StateProvider = ({ children }) => {
     return auth.sendPasswordResetEmail(email);
   }
 
+  function signInWithGoogle() {
+    auth.signInWithPopup(provider).catch((error) => toast.error(error.message));
+  }
+
   useEffect(() => {
     dispatch({ type: "GET_TOTAL" });
     localStorage.setItem("cart", JSON.stringify(state.cart));
   }, [state.cart]);
 
   useEffect(() => {
+    getBooks();
     const unsubscribe = auth.onAuthStateChanged((user) => {
       if (user) {
         dispatch({
@@ -123,6 +146,7 @@ const StateProvider = ({ children }) => {
     logIn,
     logOut,
     resetPassword,
+    signInWithGoogle
   };
 
   return (

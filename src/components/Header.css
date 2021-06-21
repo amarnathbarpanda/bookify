@@ -79,7 +79,7 @@ a{
 }
 .other_options{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     width: 11rem;
     margin-right: 1.5rem;
 }

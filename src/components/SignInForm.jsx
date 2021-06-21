@@ -4,9 +4,10 @@ import { GlobalContext } from "../GlobalContext/StateProvider";
 import { useHistory } from "react-router-dom";
 import { toast } from "react-toastify";
 import { useForm } from "react-hook-form";
+import IconButton from "@material-ui/core/IconButton";
 
 function SignInForm() {
-  const { logIn, resetPassword } = useContext(GlobalContext);
+  const { logIn, resetPassword, signInWithGoogle } = useContext(GlobalContext);
   const [loading, setLoading] = useState(false);
   const [loading1, setLoading1] = useState(false);
   const [fpassword, setFpassword] = useState(false);
@@ -163,7 +164,13 @@ function SignInForm() {
           </span>
           <span className="span">or</span>
           <span className="span">Sign in using</span>
-          <img src="img/google.png" alt="" />
+          <IconButton
+        aria-haspopup="true"
+        onClick={()=> {
+          signInWithGoogle()
+          history.push('/');
+          }}
+      ><img  src="img/google.png" alt="" /></IconButton>
         </form>
       )}
     </div>

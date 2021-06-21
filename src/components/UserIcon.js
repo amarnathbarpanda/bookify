@@ -9,6 +9,8 @@ import { GlobalContext } from "../GlobalContext/StateProvider";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useHistory } from "react-router-dom";
+import Tooltip from "@material-ui/core/Tooltip";
+import { withStyles } from "@material-ui/core";
 
 export default function UserIcon() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -62,7 +64,13 @@ export default function UserIcon() {
     }
 
 
-
+    const TextOnlyTooltip = withStyles({
+      tooltip: {
+        color: "var(--clr-white)",
+        backgroundColor: "var(--clr-primary)",
+        fontSize: 15,
+      },
+    })(Tooltip);
 
   return (
     <div>
@@ -72,7 +80,9 @@ export default function UserIcon() {
         aria-haspopup="true"
         onClick={handleClick}
       >
+    <TextOnlyTooltip title={currentUser.displayName} placement="bottom" arrow>
         <Avatar alt="user" style={user}  src={currentUser.photoURL} >{currentUser.displayName}</Avatar>
+      </TextOnlyTooltip>
       </IconButton>
       <Menu
         anchorEl={anchorEl}

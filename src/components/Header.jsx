@@ -7,7 +7,6 @@ import Toggle from "./Toggle";
 import CloseRoundedIcon from "@material-ui/icons/CloseRounded";
 import { Link, NavLink } from "react-router-dom";
 import { GlobalContext } from "../GlobalContext/StateProvider";
-// import IconButton from "@material-ui/core/IconButton";
 import UserIcon from './UserIcon';
 
 const useStyles = makeStyles(() => ({
@@ -24,7 +23,7 @@ const Header = () => {
   const cartIcon = {
     fontSize: "3rem",
     color: "var(--clr-primary)",
-    marginTop: '1.2rem'
+    margin: '1.4rem 0 1.4rem 1.4rem'
   };
   const [hamMenu, setToggle] = useState(false);
   const [togglebtn, setToggleBtn] = useState(false);
@@ -77,7 +76,7 @@ const Header = () => {
         <NavLink
           activeClassName="nav__active"
           exact
-          to={currentUser !== null? '/category': '/auth'}
+          to='/category'
           style={{ textDecoration: "none" }}
           onClick={() => {
             if(currentUser === null)
@@ -157,7 +156,9 @@ const Header = () => {
             badgeContent={totalCartItems}
             color="secondary"
           >
-            <ShoppingCartRoundedIcon style={cartIcon} />
+            {currentUser !== null ? (<ShoppingCartRoundedIcon  style={cartIcon} />):(<ShoppingCartRoundedIcon onClick={()=>
+              toast.error('You must be logged in to visit your Cart ')
+            } style={cartIcon} />)}
           </Badge>
         </Link>
         <ToastContainer style={{ fontSize: "3.8rem" }}/>

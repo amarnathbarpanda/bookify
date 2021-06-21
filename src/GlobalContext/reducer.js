@@ -2,11 +2,18 @@ export const reducer = (state, action) => {
   // console.log(action);
   switch (action.type) {
     case "ADD_TO_CART": {
+      let id = action.cartItem.id;
+      let existingItem = state.cart.find((elem) => elem.id == id);
+      if(existingItem){
+        existingItem.quantity++;
+        return {...state};
+      }else{
+        return {
+          ...state,
+          cart: [...state.cart, action.cartItem],
+        };
+      }
       
-      return {
-        ...state,
-        cart: [...state.cart, action.cartItem],
-      };
     }
     case "REMOVE_ITEM":
       return {
@@ -58,8 +65,8 @@ export const reducer = (state, action) => {
     case "SET_USER":
       return { ...state, currentUser: action.user };
 
-    case 'GET_BOOKS':
-      return {...state,  item: action.payload};
+    case "GET_BOOKS":
+      return { ...state, item: action.payload };
 
     default:
       return state;
