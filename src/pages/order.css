@@ -1,0 +1,33 @@
+.order{
+    padding: 4rem;
+    margin: 4rem 0;
+    border: .1rem solid lightgray;
+    background-color: var(--clr-white);
+    position: relative;
+    color: var(--clr-primary);
+}
+.order>h2{
+    font-size: 3rem;
+    font-family: var(--ff-para);
+    color: var(--clr-primary);
+    margin-bottom: 1rem;
+}
+h3{
+    font-size: 2.5rem;
+    font-family: var(--ff-para);
+    color: var(--clr-primary);
+}
+.order>p{
+    font-family: var(--ff-para);
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.order__id{
+    font-size: 2rem;
+    font-family: var(--ff-para);
+    font-weight: 600;
+    position: absolute;
+    top: 3rem;
+    right: 4rem;
+}

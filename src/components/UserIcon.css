@@ -1,0 +1,33 @@
+
+.profile{
+    font-family: var(--ff-head);
+    font-size: 3rem;
+    text-align: center;
+    color: var(--clr-primary-lt);
+    font-weight: 500;
+}
+.profile__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3rem;
+    width: 100%;
+    text-align: center;
+    padding:  5rem 10rem;
+}
+
+.name{
+    font-family: var(--ff-para);
+    font-size: 2rem;
+    text-align: center;
+    color: var(--clr-primary);
+    font-weight: 600;
+}
+.email{
+    font-family: var(--ff-para);
+    font-size: 1.8rem;
+    text-align: center;
+    color: var(--clr-primary);
+    font-weight: 600;
+}

@@ -5,30 +5,24 @@ import "react-toastify/dist/ReactToastify.css";
 import { useHistory } from "react-router-dom";
 import { GlobalContext } from "../GlobalContext/StateProvider";
 import { useForm } from "react-hook-form";
+import { auth } from "../firebase";
+// import { db } from "../firebase";
 
 function SignUpForm() {
   const subBtn = {
     fontSize: 20,
     color: "var(--clr-white)",
   };
-  const { signUp } = useContext(GlobalContext);
   const [loading, setLoading] = useState(false);
   const history = useHistory();
-  // const [email, setEmail] = useState("");
-  // const [password, setPassword] = useState("");
-  // const [cpassword, setCpassword] = useState("");
 
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
-  // const onSubmit = data => console.log(data);
 
-  const handleOnSubmit = async (data) => {
-    // console.log(data);
-    // e.preventDefault();
-
+  const handleOnSubmit = (data) => {
     if (data.password !== data.confirmPassword) {
       return toast.error("Passwords do not match!", {
         position: "top-right",
@@ -41,38 +35,55 @@ function SignUpForm() {
       });
     }
 
-    try {
-      setLoading(true);
-      await signUp(data.email, data.password);
-      toast.success("You have created an account Successfully!", {
-        position: "top-right",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-      });
+      auth
+      .createUserWithEmailAndPassword(data.email, data.password)
+      .then((result) =>{
+        setLoading(true)
+      result.user
+          .updateProfile({ displayName: data.uname })
+          .then(() =>  toast.success("You have created an account Successfully!", {
+              position: "top-right",
+              autoClose: 5000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+            }))
+            history.push("/");
+      }).catch((error) => toast.error(`Failed to create an account! ${error.message}`, {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+          }));
 
-      history.push("/");
-    } catch {
-      toast.error("Failed to create an account!", {
-        position: "top-right",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-      });
-    }
+    
+    
+
+    // db.collection("users").add({
+    //   username: data.uname,
+    //   email: data.email,
+    // }).then((docRef)=>{
+    //   console.log("Doc written with ID : ", docRef.id);
+    // }).catch((error)=> console.log(error));
 
     setLoading(false);
   };
 
   return (
     <form onSubmit={handleSubmit(handleOnSubmit)}>
-      {/* <input type="text" placeholder="Username" /> */}
+      <input
+        type="text"
+        {...register("uname", { required: true })}
+        placeholder="Username"
+      />
+      <span className="span" style={{ color: "#ff4757" }}>
+        {errors.uname?.type === "required" && " Username is required"}
+      </span>
       <input
         type="text"
         {...register("email", {

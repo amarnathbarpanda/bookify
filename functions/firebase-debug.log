@@ -1,0 +1,50 @@
+[debug] [2021-06-23T12:59:31.063Z] ----------------------------------------------------------------------
+[debug] [2021-06-23T12:59:31.066Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Amu\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start
+[debug] [2021-06-23T12:59:31.066Z] CLI Version:   9.13.1
+[debug] [2021-06-23T12:59:31.067Z] Platform:      win32
+[debug] [2021-06-23T12:59:31.067Z] Node Version:  v12.18.0
+[debug] [2021-06-23T12:59:31.068Z] Time:          Wed Jun 23 2021 18:29:31 GMT+0530 (India Standard Time)
+[debug] [2021-06-23T12:59:31.070Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-06-23T12:59:31.084Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-06-23T12:59:31.086Z] > authorizing via signed-in user (amarnathbarpanda.ab97@gmail.com)
+[info] i  emulators: Starting emulators: functions, hosting {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: functions, hosting"}}
+[warn] !  emulators: It seems that you are running multiple instances of the emulator suite for project bookify-7a0fa. This may result in unexpected behavior. 
+[debug] [2021-06-23T12:59:32.206Z] [hub] writing locator at C:\Users\Amu\AppData\Local\Temp\hub-bookify-7a0fa.json
+[warn] !  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: auth, firestore, database, pubsub, storage {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mauth, firestore, database, pubsub, storage\u001b[22m"}}
+[warn] !  Your requested "node" version "14" doesn't match your global version "12" {"metadata":{"emulator":{"name":"functions"},"message":"Your requested \"node\" version \"14\" doesn't match your global version \"12\""}}
+[debug] [2021-06-23T12:59:33.673Z] defaultcredentials: writing to file C:\Users\Amu\AppData\Roaming\firebase\amarnathbarpanda_ab97_gmail.com_application_default_credentials.json
+[debug] [2021-06-23T12:59:33.684Z] Setting GAC to C:\Users\Amu\AppData\Roaming\firebase\amarnathbarpanda_ab97_gmail.com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\Amu\\AppData\\Roaming\\firebase\\amarnathbarpanda_ab97_gmail.com_application_default_credentials.json"}}
+[debug] [2021-06-23T12:59:33.690Z] > refreshing access token with scopes: []
+[debug] [2021-06-23T12:59:33.692Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-06-23T12:59:54.831Z] Failed to get Admin SDK config for bookify-7a0fa, falling back to cache Failed to get Admin SDK for Firebase project bookify-7a0fa. Please make sure the project exists and your account has permission to access it. {"name":"FirebaseError","children":[],"exit":2,"message":"Failed to get Admin SDK for Firebase project bookify-7a0fa. Please make sure the project exists and your account has permission to access it.","original":{"name":"FirebaseError","children":[],"exit":1,"message":"Authentication Error: Your credentials are no longer valid. Please run \u001b[1mfirebase login --reauth\u001b[22m\n\nFor CI servers and headless environments, generate a new token with \u001b[1mfirebase login:ci\u001b[22m","status":500},"status":500}
+[debug] [2021-06-23T12:59:55.861Z] > refreshing access token with scopes: []
+[debug] [2021-06-23T12:59:55.861Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-06-23T13:00:16.886Z] Failed to list hosting sites
+[debug] Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+[debug] [2021-06-23T13:00:16.888Z] > refreshing access token with scopes: []
+[debug] [2021-06-23T13:00:16.888Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-06-23T13:00:37.897Z] fetchWebSetup error: FirebaseError: Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+[warn] !  hosting: Using web app configuration from cache. 
+[info] i  hosting: Serving hosting files from: build {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mbuild\u001b[22m"}}
+[info] +  hosting: Local server: http://localhost:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://localhost:5000\u001b[22m\u001b[24m"}}
+[warn] !  ui: Emulator UI unable to start on port 4000, starting on 4001 instead. {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI unable to start on port 4000, starting on 4001 instead."}}
+[debug] [2021-06-23T13:00:39.260Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2021-06-23T13:00:39.260Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2021-06-23T13:00:39.260Z] Starting Emulator UI with command {"binary":"node","args":["C:\\Users\\Amu\\.cache\\firebase\\emulators\\ui-v1.5.0\\server.bundle.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"C:\\\\Users\\\\Amu\\\\.cache\\\\firebase\\\\emulators\\\\ui-v1.5.0\\\\server.bundle.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2021-06-23T13:00:39.751Z] Web / API server started at http://localhost:4001
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at http://localhost:4001\n"}}
+[info] i  functions: Watching "F:\PROGRAMMING\Placement Course\MERN\React\bookify\functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"F:\\PROGRAMMING\\Placement Course\\MERN\\React\\bookify\\functions\" for Cloud Functions..."}}
+[debug] [2021-06-23T13:00:39.892Z] [worker-pool] addWorker(~diagnostic~) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(~diagnostic~)"}}
+[debug] [2021-06-23T13:00:39.893Z] [worker-pool] Adding worker with key ~diagnostic~, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key ~diagnostic~, total=1"}}
+[debug] [2021-06-23T13:00:39.893Z] [worker-pool] submitWork(triggerId=) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitWork(triggerId=)"}}
+[debug] [2021-06-23T13:00:39.893Z] [worker-~diagnostic~-6e3f8831-2f4c-440e-b515-5b7cecdb0ec6]: Assigning socketPath: \\?\pipe\F:\PROGRAMMING\Placement Course\MERN\React\bookify\functions\8612 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-~diagnostic~-6e3f8831-2f4c-440e-b515-5b7cecdb0ec6]: Assigning socketPath: \\\\?\\pipe\\F:\\PROGRAMMING\\Placement Course\\MERN\\React\\bookify\\functions\\8612"}}
+[debug] [2021-06-23T13:00:39.894Z] [worker-~diagnostic~-6e3f8831-2f4c-440e-b515-5b7cecdb0ec6]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-~diagnostic~-6e3f8831-2f4c-440e-b515-5b7cecdb0ec6]: BUSY"}}

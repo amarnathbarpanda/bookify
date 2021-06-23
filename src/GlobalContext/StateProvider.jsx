@@ -23,40 +23,42 @@ const StateProvider = ({ children }) => {
   // console.log(state.item);
   // console.log(state.cart);
   const [loading, setLoading] = useState(true);
-  const ref = db.collection('books').orderBy('id','asc');
+  const ref = db.collection("books").orderBy("id", "asc");
 
   const getBooks = () => {
     setLoading(true);
-    ref.onSnapshot((querySnapshot)=>{
+    ref.onSnapshot((querySnapshot) => {
       const items = [];
-      querySnapshot.forEach((doc) =>{
+      querySnapshot.forEach((doc) => {
         let p = doc.data();
         items.push(p);
       });
       console.log(items);
       dispatch({
-        type: 'GET_BOOKS',
-        payload: items
-      })
+        type: "GET_BOOKS",
+        payload: items,
+      });
       // setBooks(items);
       setLoading(false);
     });
-}
+  };
   const addToCart = (id, img, title, author, price, rating) => {
     if (state.currentUser !== null) {
-      return (dispatch({
-        type: "ADD_TO_CART",
-        cartItem: {
-          id: id,
-          img: img,
-          title: title,
-          author: author,
-          price: price,
-          rating: rating,
-          quantity: 1,
-        },
-      }),
-      dispatch({ type: "GET_TOTAL" }));
+      return (
+        dispatch({
+          type: "ADD_TO_CART",
+          cartItem: {
+            id: id,
+            img: img,
+            title: title,
+            author: author,
+            price: price,
+            rating: rating,
+            quantity: 1,
+          },
+        }),
+        dispatch({ type: "GET_TOTAL" })
+      );
     } else {
       return toast.error("You must be logged in before adding items to cart!");
     }
@@ -86,9 +88,15 @@ const StateProvider = ({ children }) => {
       type: "CLEAR_CART",
     });
   };
-  const signUp = (email, password) => {
-    return auth.createUserWithEmailAndPassword(email, password);
-  };
+  // const signUp = (username, email, password) => {
+  //   return auth
+  //     .createUserWithEmailAndPassword(email, password)
+  //     .then((data) =>
+  //       data.user
+  //         .updateProfile({ displayName: username })
+  //         .then((user) => console.log(user))
+  //     );
+  // };
   function logIn(email, password) {
     return auth.signInWithEmailAndPassword(email, password);
   }
@@ -142,11 +150,11 @@ const StateProvider = ({ children }) => {
     incQuantity,
     decQuantity,
     clearCart,
-    signUp,
+    // signUp,
     logIn,
     logOut,
     resetPassword,
-    signInWithGoogle
+    signInWithGoogle,
   };
 
   return (

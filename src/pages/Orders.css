@@ -1,0 +1,17 @@
+.orders{
+    padding: 2rem 8rem;
+}
+
+.orders>h1{
+    margin: 3rem 0;
+    font-family: var(--ff-head);
+    font-size: 4rem;
+    text-align: center;
+    font-weight: 500;
+    color: var(--clr-primary-lt);
+}
+.continueShopping{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

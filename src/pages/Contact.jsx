@@ -1,6 +1,9 @@
 import React from "react";
 import "./Contact.css";
 import Button from '@material-ui/core/Button';
+import { useState } from "react";
+import { set } from "react-hook-form";
+import { toast } from "react-toastify";
 
 
 function Contact() {
@@ -8,6 +11,18 @@ function Contact() {
         fontSize: 20,
         // marginBottom: '2rem'
     };
+    const [uname, setUname] = useState('');
+    const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('');
+
+    const handleSubmit = (e) =>{
+        e.preventDefault();
+        setUname("");
+        setEmail("");
+        setMessage("");
+        toast.success("We will be in touch with lightening speed");
+    }
+
   return (
     <div className="contact">
       <div className="contact__container">
@@ -17,11 +32,13 @@ function Contact() {
             Please fill out the the quick and we will be in touch with
             lightening speed.
           </p>
-          <form>
-            <input type="text" placeholder="Name" />
-            <input type="text" placeholder="Email Address" />
-            <textarea  cols="30" rows="5" placeholder="Message"></textarea>
-            <Button style={subBtn} variant="contained" color="secondary">Submit</Button>
+          <form onSubmit={handleSubmit}>
+            <input value={uname} type="text" placeholder="Name" onChange={(e)=> setUname(e.target.value)}/>
+            <input value={email} type="text" placeholder="Email Address" onChange={(e)=> setEmail(e.target.value)}/>
+            <textarea  value={message} cols="30" rows="5" placeholder="Message" onChange={(e)=> setMessage(e.target.value)}></textarea>
+            <Button style={subBtn} variant="contained" color="secondary"
+            type="submit"
+            >Submit</Button>
           </form>
         </div>
         <div className="contact__right">

@@ -161,7 +161,7 @@ const Header = () => {
             } style={cartIcon} />)}
           </Badge>
         </Link>
-        <ToastContainer style={{ fontSize: "3.8rem" }}/>
+        <ToastContainer style={{ fontSize: "4rem", fontFamily: 'var(--ff-para)' }}/>
       </div>
     </div>
   );
