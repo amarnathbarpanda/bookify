@@ -31,7 +31,6 @@ const StateProvider = ({ children }) => {
         let p = doc.data();
         items.push(p);
       });
-      console.log(items);
       dispatch({
         type: "GET_BOOKS",
         payload: items,
@@ -86,15 +85,7 @@ const StateProvider = ({ children }) => {
       type: "CLEAR_CART",
     });
   };
-  // const signUp = (username, email, password) => {
-  //   return auth
-  //     .createUserWithEmailAndPassword(email, password)
-  //     .then((data) =>
-  //       data.user
-  //         .updateProfile({ displayName: username })
-  //         .then((user) => console.log(user))
-  //     );
-  // };
+
   function logIn(email, password) {
     return auth.signInWithEmailAndPassword(email, password);
   }
@@ -126,7 +117,6 @@ const StateProvider = ({ children }) => {
           type: "SET_USER",
           user: user,
         });
-        // console.log(user);
         setLoading(false);
       } else {
         dispatch({
@@ -136,7 +126,6 @@ const StateProvider = ({ children }) => {
 
         setLoading(false);
       }
-      console.log(user);
     });
     return () => unsubscribe();
     // eslint-disable-next-line react-hooks/exhaustive-deps

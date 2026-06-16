@@ -39,7 +39,7 @@ function Payment() {
     getClientSecret();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [cart]);
-  console.log("THE SECRET is >>>", clientSecret);
+
   const handleSubmit = async (event) => {
     // all the fancy stripe stuff...
     event.preventDefault();
