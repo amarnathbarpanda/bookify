@@ -25,12 +25,12 @@
     "react-toastify": "^7.0.4",
     "stripe": "^8.156.0",
     "styled-components": "^5.3.0",
-    "web-vitals": "^1.1.2"
+    "concurrently": "^7.0.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "NODE_OPTIONS=--openssl-legacy-provider react-scripts start",
+    "build": "NODE_OPTIONS=--openssl-legacy-provider react-scripts build",
+    "test": "NODE_OPTIONS=--openssl-legacy-provider react-scripts test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

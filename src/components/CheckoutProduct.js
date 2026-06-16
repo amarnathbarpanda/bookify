@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { GlobalContext } from "../GlobalContext/StateProvider";
 import "./CheckoutProduct.css";
 import Rating from "@material-ui/lab/Rating";
@@ -6,7 +6,7 @@ import { Button } from "@material-ui/core";
 
 
 function CheckoutProduct({ id, img, title, author, price, rating ,hideButton}) {
-    const {removeItem,cart} = useContext(GlobalContext);
+    const {removeItem} = useContext(GlobalContext);
 
     const subBtn = {
       fontSize: 16,

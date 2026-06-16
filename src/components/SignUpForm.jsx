@@ -1,12 +1,10 @@
-import React, { useContext, useState } from "react";
+import { useState } from "react";
 import Button from "@material-ui/core/Button";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useHistory } from "react-router-dom";
-import { GlobalContext } from "../GlobalContext/StateProvider";
 import { useForm } from "react-hook-form";
 import { auth } from "../firebase";
-// import { db } from "../firebase";
 
 function SignUpForm() {
   const subBtn = {
@@ -60,17 +58,6 @@ function SignUpForm() {
             draggable: true,
             progress: undefined,
           }));
-
-    
-    
-
-    // db.collection("users").add({
-    //   username: data.uname,
-    //   email: data.email,
-    // }).then((docRef)=>{
-    //   console.log("Doc written with ID : ", docRef.id);
-    // }).catch((error)=> console.log(error));
-
     setLoading(false);
   };
 
@@ -121,15 +108,12 @@ function SignUpForm() {
       </span>
       <input
         type="password"
-        // value={cpassword}
-        // name="confirmPassword"
         {...register("confirmPassword", {
           required: true,
           minLength: 6,
           maxLength: 14,
         })}
         placeholder="Confirm Password"
-        // onChange={(e) => setCpassword(e.target.value)}
         autoComplete="off"
       />
       <span className="span" style={{ color: "#ff4757" }}>

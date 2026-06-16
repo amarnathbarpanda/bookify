@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { toast } from "react-toastify";
 import "./Subscribe.css";
 function Subscribe() {
-  const [subscribe, setSubscribe] = useState("");
+  const [setSubscribe] = useState("");
 
   const handleSubscribe = (e) => {
     e.preventDefault();

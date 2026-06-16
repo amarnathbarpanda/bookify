@@ -21,7 +21,6 @@ const PopularBooks = () => {
         <Carousel breakPoints={breakPoints}>
         {
           popularBooks.map((items)=>{
-            {/* console.log(items.id); */}
             return(
             <Card key={items.id} id={items.id} img={items.img} title={items.title} author={items.author} price={items.price} rating={items.rating} altText={items.altText}/>
             )})

@@ -1,5 +1,5 @@
 import { Link, useHistory } from "react-router-dom";
-import React, { useState, useContext, useEffect } from "react";
+import { useState, useContext, useEffect } from "react";
 import CheckoutProduct from "../components/CheckoutProduct";
 import { GlobalContext } from "../GlobalContext/StateProvider";
 import { Button } from "@material-ui/core";
@@ -18,7 +18,7 @@ function Payment() {
   const [disabled, setDisabled] = useState(true);
   const [succeeded, setSucceeded] = useState(false);
   const [processing, setProcessing] = useState("");
-  const [clientSecret, setClientSecret] = useState(true);
+  const [clientSecret, setClientSecret] = useState("");
   const [address, setAddress] = useState("");
   const history = useHistory();
 
@@ -37,6 +37,7 @@ function Payment() {
     };
 
     getClientSecret();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [cart]);
   console.log("THE SECRET is >>>", clientSecret);
   const handleSubmit = async (event) => {
@@ -44,7 +45,7 @@ function Payment() {
     event.preventDefault();
     setProcessing(true);
 
-    const payload = await stripe
+    await stripe
       .confirmCardPayment(clientSecret, {
         payment_method: {
           card: elements.getElement(CardElement),

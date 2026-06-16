@@ -2,14 +2,12 @@ import React from "react";
 import "./Contact.css";
 import Button from '@material-ui/core/Button';
 import { useState } from "react";
-import { set } from "react-hook-form";
 import { toast } from "react-toastify";
 
 
 function Contact() {
     const subBtn = {
         fontSize: 20,
-        // marginBottom: '2rem'
     };
     const [uname, setUname] = useState('');
     const [email, setEmail] = useState('');

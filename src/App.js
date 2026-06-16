@@ -12,10 +12,7 @@ import Payment from "./pages/Payment";
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
 import Orders from "./pages/Orders";
-
-const promise = loadStripe(
-  "pk_test_51J4tRbSH5MpBDULY5fre0UEnp9w5xNFoPqzFJ8TVwSEdNZKi3JQwIYKBnFeTCoCf8wefiypRdj5Tw9jxK5Gjlhbf00TY5s1BMX"
-);
+const promise = loadStripe(process.env.REACT_APP_STRIPE_PUBLIC_KEY);
 const App = () => {
   return (
     <div className="app">

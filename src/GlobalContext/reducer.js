@@ -3,7 +3,7 @@ export const reducer = (state, action) => {
   switch (action.type) {
     case "ADD_TO_CART": {
       let id = action.cartItem.id;
-      let existingItem = state.cart.find((elem) => elem.id == id);
+      let existingItem = state.cart.find((elem) => elem.id === id);
       if(existingItem){
         existingItem.quantity++;
         return {...state};

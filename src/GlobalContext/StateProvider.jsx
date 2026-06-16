@@ -20,8 +20,6 @@ const initialState = {
 
 const StateProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
-  // console.log(state.item);
-  // console.log(state.cart);
   const [loading, setLoading] = useState(true);
   const ref = db.collection("books").orderBy("id", "asc");
 
@@ -141,6 +139,7 @@ const StateProvider = ({ children }) => {
       console.log(user);
     });
     return () => unsubscribe();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const value = {

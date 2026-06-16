@@ -1,7 +1,6 @@
 import React,{ useContext } from "react";
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
-// import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 import Avatar from '@material-ui/core/Avatar';
 import IconButton from "@material-ui/core/IconButton";
 import './UserIcon.css'
@@ -11,7 +10,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { useHistory } from "react-router-dom";
 import Tooltip from "@material-ui/core/Tooltip";
 import Button from '@material-ui/core/Button';
-import { useMediaQuery, useTheme, withStyles } from "@material-ui/core";
+import { withStyles } from "@material-ui/core";
 import { Dialog } from "@material-ui/core";
 import DialogTitle from '@material-ui/core/DialogTitle';
 import './UserIcon.css';
@@ -29,8 +28,7 @@ export default function UserIcon() {
   };
 
   const handleClose = () => {
-    setAnchorEl(null);  // should be written to close the menu
-    // console.log(currentUser.photoURL);
+    setAnchorEl(null);
   };
   const logOutAction = async ()=>{
     setAnchorEl(null);
@@ -84,11 +82,8 @@ export default function UserIcon() {
       history.push('/orders');
   
     }
-  //? code for profile dialog box
 
   const [open, setOpen] = React.useState(false);
-  const theme = useTheme();
-  const fullScreen = useMediaQuery(theme.breakpoints.down('sm'));
 
     const handleClickOpen = () => {
       setAnchorEl(null);

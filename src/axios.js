@@ -1,7 +1,7 @@
-import axios  from 'axios';
+import axios from 'axios';
 
 const instance = axios.create({
-    baseURL : 'http://localhost:5001/bookify-7a0fa/us-central1/api'  // the api (cloud function ) URL
+  baseURL: process.env.REACT_APP_API_URL || 'http://localhost:9000',
 });
 
 export default instance;
